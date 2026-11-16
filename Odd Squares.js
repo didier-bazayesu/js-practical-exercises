@@ -1,5 +1,14 @@
-let oddSquare = (array)=>{
+function findIndicesOfNumber(nums, target){    
+    for(let i=0 ; i< nums.length ; i++){
+        for(let j=0 ; j<nums.length; j++){
+            if(i === j) continue;          
+             if(nums[i]+nums[j] === target){
+                
+                return [i,j]
+             } 
+        }
+    }
 
-    return  array.filter(el=> el%2 === 1).map(el=> el *el)
+    return []
 }
-console.log(oddSquare([1,2,3,5,4,3,2]))
+console.log(findIndicesOfNumber([5,4,5,5],8 ))
